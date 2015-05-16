@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ main()
-comment1.params=cigars\ isWeekend
-comment1.target=boolean\ cigarParty(int,\ boolean)
-numComments=2

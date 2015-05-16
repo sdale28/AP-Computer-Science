@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=gender\ canFly\ name
-comment0.target=Robin(boolean,\ boolean,\ java.lang.String)
-comment1.params=
-comment1.target=java.lang.String\ toString()
-comment1.text=\r\n\ toString()\r\n
-numComments=2

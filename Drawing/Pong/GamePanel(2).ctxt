@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=GamePanel()
-comment1.params=page
-comment1.target=void\ paintComponent(java.awt.Graphics)
-comment2.params=page\ left\ right\ ball
-comment2.target=void\ drawBoard(java.awt.Graphics,\ Player,\ Player,\ Ball)
-numComments=3

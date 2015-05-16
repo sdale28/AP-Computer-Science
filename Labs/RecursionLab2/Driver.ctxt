@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ main()
-comment1.params=scan\ print
-comment1.target=int\ intScan(java.util.Scanner,\ java.lang.String)
-comment2.params=n
-comment2.target=int\ power(int)
-numComments=3
