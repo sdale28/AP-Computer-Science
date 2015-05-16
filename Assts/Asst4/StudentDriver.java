@@ -2,13 +2,13 @@
  * @author Sam Dale
  * @version 12/5/13
  * AP Computer Science
- * 
+ *
  * Asst4: Write a Java class named Address, which has the street, city, and zip of the student so that each student has two addresses.
  */
 import java.util.*;
 public class StudentDriver
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("\tStudent Database");
         System.out.println();
@@ -16,7 +16,7 @@ public class StudentDriver
         int numStudents=DriverUtil.intScan(scan,"Number of students to process: "); //Check to make sure the input is a number.
         System.out.println();
         Student [] students=new Student[numStudents];
-        
+
         System.out.println("\tStudent Info Menu");
         System.out.println();
         boolean run=true;
@@ -27,7 +27,7 @@ public class StudentDriver
             System.out.println("\tEnter P to (P)rint Student info");
             System.out.println("\tEnter Q to quit");
             System.out.println();
-            
+
             System.out.print("\tPlease enter your choice: ");
             String inputActionString=scan.next().toLowerCase();
             char inputAction=inputActionString.charAt(0);
@@ -71,7 +71,7 @@ public class StudentDriver
             }
         }
     } //End main.
-    
+
     public static void printList(Student [] students)
     {
         System.out.println("ID\tName");
@@ -79,7 +79,7 @@ public class StudentDriver
             System.out.println(students[i].getId()+"\t"+students[i].getLastName()+", "+students[i].getFirstName());
         System.out.println();
     }
-    
+
     /***********************************************************************************************************
      * loadStudent()
      * ********************************************************************************************************/
@@ -95,7 +95,7 @@ public class StudentDriver
         int zip2;
         String phone;
         double gpa;
-        
+
         System.out.print("Student's last name: ");
         lastName=scan.next();
         System.out.print("Student's first name: ");
@@ -115,13 +115,13 @@ public class StudentDriver
         System.out.print("Student's phone number: ");
         phone=scan.next();
         gpa=DriverUtil.doubleScan(scan,"Student's GPA: ");
-        
+
         Address home1=new Address(street1,city1,zip1);
         Address home2=new Address(street2,city2,zip2);
         Student thisStudent=new Student(lastName, firstName, home1, home2, phone, gpa);
         return thisStudent;
     } //End loadStudent.
-    
+
     /***********************************************************************************************************
      * modifyStudent()
      * ********************************************************************************************************/
@@ -147,7 +147,7 @@ public class StudentDriver
         System.out.println("Phone: "+student.getPhone());
         System.out.println("GPA: "+student.getGpa());
         System.out.println();
-        
+
         String newLastName=null;
         String newFirstName=null;
         String newStreet1=null;
@@ -158,60 +158,60 @@ public class StudentDriver
         int newZip2=-1;
         String newPhone=null;
         double newGpa=-1;
-        
+
         System.out.println("New Info (press ENTER to keep same information):");
         System.out.print("New Last Name: ");
         newLastName=scan.next();
         if (!newLastName.equals(""))
             student.setLastName(newLastName);
-            
+
         System.out.print("New First Name: ");
         newFirstName=scan.next();
         if (!newFirstName.equals(""))
             student.setFirstName(newFirstName);
-            
+
         System.out.println("Address 1: ");
         System.out.print("\tNew Street: ");
         newStreet1=scan.next();
         if (!newStreet1.equals(""))
             student.getHome1().setStreet(newStreet1);
-            
+
         System.out.print("\tNew City: ");
         newCity1=scan.next();
         if (!newCity1.equals(""))
             student.getHome1().setCity(newCity1);
-            
+
         newZip1=DriverUtil.zipScan(scan,"New ");
         if (newZip1!=-1)
             student.getHome1().setZip(newZip1);
-            
+
         System.out.println("Address 2: ");
         System.out.print("\tNew Street: ");
         newStreet2=scan.next();
         if (!newStreet2.equals(""))
             student.getHome2().setStreet(newStreet2);
-            
+
         System.out.print("\tNew City: ");
         newCity2=scan.next();
         if (!newCity2.equals(""))
             student.getHome2().setCity(newCity2);
-            
+
         newZip2=DriverUtil.zipScan(scan,"New ");
         if (newZip2!=-1)
             student.getHome2().setZip(newZip2);
-        
+
         System.out.print("New Phone: ");
         newPhone=scan.next();
         if (!newPhone.equals(""))
             student.setPhone(newPhone);
-            
+
         newGpa=DriverUtil.newGpaScan(scan);
         if (newGpa!=-1)
             student.setGpa(newGpa);
-        
+
         System.out.println();
     } //End modifyStudent.
-    
+
     /***********************************************************************************************************
      * printStudent()
      * ********************************************************************************************************/
@@ -222,7 +222,7 @@ public class StudentDriver
         else
             System.out.println("There are "+numStudents+" students in the database.");
         System.out.println();
-        
+
         System.out.println(student.toString());
         System.out.println();
     } //End printStudent.

@@ -2,9 +2,9 @@
  * @author Sam Dale
  * @version 1/4/14
  * AP Computer Science
- * 
+ *
  * Asst1: Create some students (instantiate objects).
- * Create two classes: StudentDriver, which is the driver and contains the main(). 
+ * Create two classes: StudentDriver, which is the driver and contains the main().
  * The other is Student, which contains the constructors.
  * Asst2: Add functionality to modify a student (use getters and setters).
  * Asst3: Add Print capability (display to screen, use a toString).
@@ -16,7 +16,7 @@ import java.util.*;
 import java.io.*;
 public class StudentDriver
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("\tStudent Database");
         System.out.println();
@@ -255,7 +255,7 @@ public class StudentDriver
             FileInputStream fileInStream=new FileInputStream(file);
             ObjectInputStream objInStream=new ObjectInputStream(fileInStream);
             students=(Student[])objInStream.readObject();
-            
+
             System.out.println("File read.");
         }
         catch (FileNotFoundException ex)
@@ -269,7 +269,7 @@ public class StudentDriver
         System.out.println();
         return students;
     } //End readFile().
-    
+
     /***********************************************************************************************************
      * writeFile()
      * ********************************************************************************************************/
@@ -282,7 +282,7 @@ public class StudentDriver
             objOutStream.writeObject(students);
             objOutStream.close();
             fileOutStream.close();
-            
+
             System.out.println("File written.");
         }
         catch (FileNotFoundException ex)

@@ -2,9 +2,9 @@
  * @author Sam Dale
  * @version 1/13/14
  * AP Computer Science
- * 
+ *
  * Asst1: Create some students (instantiate objects).
- * Create two classes: StudentDriver, which is the driver and contains the main(). 
+ * Create two classes: StudentDriver, which is the driver and contains the main().
  * The other is Student, which contains the constructors.
  * Asst2: Add functionality to modify a student (use getters and setters).
  * Asst3: Add Print capability (display to screen, use a toString).
@@ -18,7 +18,7 @@ import java.util.*;
 import java.io.*;
 public class StudentDriver
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("\tStudent Database");
         System.out.println();
@@ -97,7 +97,7 @@ public class StudentDriver
             for (Student tmpStudent : students)
                 System.out.println(tmpStudent.getId()+"\t"+tmpStudent.getLastName()+", "+tmpStudent.getFirstName());
             System.out.println();
-            
+
             int modifyId=DriverUtil.intScan(scan,"ID of Student to "+print+": ");
             for (Student tmpStudent: students)
             {
@@ -152,7 +152,7 @@ public class StudentDriver
         Address home1=new Address(street1,city1,zip1);
         Address home2=new Address(street2,city2,zip2);
         Student thisStudent=new Student(lastName, firstName, home1, home2, phone, gpa);
-        
+
         System.out.println();
         return thisStudent;
     } //End loadStudent.
@@ -279,17 +279,17 @@ public class StudentDriver
             System.out.println(ex);
         }
         System.out.println();
-        
+
         if (!students.isEmpty())
         {
             students.get(students.size()-1).setLastId(students.get(students.size()-1).getId()+1); //This sets the lastId in the student to the last ID number of the read database.
         }
         else
             System.out.println("Empty array read.");
-            
+
         return students;
     } //End readFile().
-    
+
     /***********************************************************************************************************
      * writeFile()
      * ********************************************************************************************************/
@@ -302,7 +302,7 @@ public class StudentDriver
             objOutStream.writeObject(students);
             objOutStream.close();
             fileOutStream.close();
-            
+
             System.out.println("File written.");
         }
         catch (FileNotFoundException ex)
@@ -315,7 +315,7 @@ public class StudentDriver
         }
         System.out.println();
     } //End writeFile().
-    
+
     /***********************************************************************************************************
      * deleteStudent()
      * ********************************************************************************************************/

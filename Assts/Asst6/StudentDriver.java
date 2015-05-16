@@ -2,9 +2,9 @@
  * @author Sam Dale
  * @version 2/20/14
  * AP Computer Science
- * 
+ *
  * Asst1: Create some students (instantiate objects).
- * Create two classes: StudentDriver, which is the driver and contains the main(). 
+ * Create two classes: StudentDriver, which is the driver and contains the main().
  * The other is Student, which contains the constructors.
  * Asst2: Add functionality to modify a student (use getters and setters).
  * Asst3: Add Print capability (display to screen, use a toString).
@@ -14,14 +14,14 @@
  * Asst5: Make the student array into an ArrayList.
  *        Add functionality to delete a student (change menu and create a deleteStudent which prompts for which student to elete and decrement totStudents, the class variable).
  * Asst6: Give the students properties of Inheritance. Each Student is either "vanilla", an Athlete, or an Artist. An Athlete plays Baseball or Basketball. An Artist is either a Musician or Artist.
- *        There are different levels in the sports, different positions, and other traits to the Baseball, Basketball, Musician, and Actor classes. 
+ *        There are different levels in the sports, different positions, and other traits to the Baseball, Basketball, Musician, and Actor classes.
  *        This requires a large addition to both the loadStudent() and modifyStudent() methods as well as the addition of two abstract classes and four classes.
  */
 import java.util.*;
 import java.io.*;
 public class StudentDriver
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("\tStudent Database");
         System.out.println();
@@ -136,7 +136,7 @@ public class StudentDriver
         lastName=scan.next();
         System.out.print("Student's first name: ");
         firstName=scan.next();
-        
+
         System.out.println("Address 1:");
         System.out.print("\tStudent's street address: ");
         street1=scan.next();
@@ -144,7 +144,7 @@ public class StudentDriver
         city1=scan.next();
         zip1=DriverUtil.newIntScan(scan,"\tZip: ");
         Address home1=new Address(street1,city1,zip1);
-        
+
         System.out.println("Address 2 (Fill with blanks if none):");
         System.out.print("\tStudent's street address: ");
         street2=scan.next();
@@ -152,7 +152,7 @@ public class StudentDriver
         city2=scan.next();
         zip2=DriverUtil.newIntScan(scan,"\tZip: ");
         Address home2=new Address(street2,city2,zip2);
-        
+
         System.out.print("Student's phone number: ");
         phone=scan.next();
         gpa=DriverUtil.doubleScan(scan,"Student's GPA: ");
@@ -192,7 +192,7 @@ public class StudentDriver
                             String sportInputActionString=scan.next().toLowerCase();
                             char sportInputAction=sportInputActionString.charAt(0);
                             System.out.println();
-                            
+
                             byte level=00000000;
                             boolean clearance=false;
                             if (sportInputActionString.length()==1) //Makes sure user only entered in one character.
@@ -230,7 +230,7 @@ public class StudentDriver
                                     else
                                         System.out.println("Invalid entry.");
                                 }
-                                
+
                                 boolean levelRun=true;
                                 while(levelRun)
                                 {
@@ -274,7 +274,7 @@ public class StudentDriver
                                 {
                                     case 'e':
                                         double batAvg=DriverUtil.doubleScan(scan,firstName+"'s batting average: ");
-                                
+
                                         short position=00000000;
                                         boolean positionRun=true;
                                         while (positionRun)
@@ -334,13 +334,13 @@ public class StudentDriver
                                             }
                                             else
                                                 System.out.println("Invalid entry.");
-                                            
+
                                             System.out.println("Do they play another position?");
                                             System.out.println();
                                             System.out.println("\tEnter Y for (Y)es");
                                             System.out.println("\tEnter N for (N)o");
                                             System.out.println();
-                                            
+
                                             System.out.print("\tPlease enter your choice: ");
                                             String morePositionsInputActionString=scan.next().toLowerCase();
                                             char morePositionsInputAction=morePositionsInputActionString.charAt(0);
@@ -435,13 +435,13 @@ public class StudentDriver
                                             }
                                             else
                                                 System.out.println("Invalid entry.");
-                                            
+
                                             System.out.println("Do they play in another group?");
                                             System.out.println();
                                             System.out.println("\tEnter Y for (Y)es");
                                             System.out.println("\tEnter N for (N)o");
                                             System.out.println();
-                                            
+
                                             System.out.print("\tPlease enter your choice: ");
                                             String moreGroupsInputActionString=scan.next().toLowerCase();
                                             char moreGroupsInputAction=moreGroupsInputActionString.charAt(0);
@@ -479,7 +479,7 @@ public class StudentDriver
                                             System.out.println("\tEnter Y for (Y)es");
                                             System.out.println("\tEnter N for (N)o");
                                             System.out.println();
-                                            
+
                                             System.out.print("\tPlease enter your choice: ");
                                             String thespianInputActionString=scan.next().toLowerCase();
                                             char thespianInputAction=thespianInputActionString.charAt(0);
@@ -503,7 +503,7 @@ public class StudentDriver
                                             else
                                                 System.out.println("Invalid entry.");
                                         }
-                                        
+
                                         int numPlays=DriverUtil.intScan(scan, "Number of plays: ");
                                         thisStudent=new Actor(lastName, firstName, home1, home2, phone, gpa, yrsExp, thespian, numPlays);
                                         artistRun=false;
@@ -558,7 +558,7 @@ public class StudentDriver
             System.out.println("\tZip: None.");
         System.out.println("Phone: "+student.getPhone());
         System.out.println("GPA: "+student.getGpa());
-        
+
         if (student instanceof Athlete)
         {
             System.out.println("Athlete: ");
@@ -568,18 +568,18 @@ public class StudentDriver
             else
                 tmpClear="Not Cleared.";
             System.out.println("\tClearance: "+tmpClear);
-            
+
             String tmpEligible="";
             if (((Athlete)student).getEligible())
                 tmpEligible="Eligible.";
             else
                 tmpEligible="Not Eligible.";
             System.out.println("\tEligibility: "+tmpEligible);
-            
+
             if (student instanceof Baseball)
             {
                 System.out.println("Baseball: ");
-                
+
                 byte level=((Baseball)student).getLevel();
                 String tmpLevel="";
                 switch(level)
@@ -596,7 +596,7 @@ public class StudentDriver
                     default:
                         tmpLevel="Error.";
                 }
-                
+
                 short position=((Baseball)student).getPosition();
                 String tmpPosition="";
                 if ((position & Baseball.PITCHER) == Baseball.PITCHER)
@@ -617,7 +617,7 @@ public class StudentDriver
                     tmpPosition=tmpPosition.concat(" Center Field");
                 if ((position & Baseball.RIGHT_FIELD) == Baseball.RIGHT_FIELD)
                     tmpPosition=tmpPosition.concat(" Right Field");
-                    
+
                 System.out.println("\tLevel: "+tmpLevel);
                 System.out.println("\tBatting Average: "+((Baseball)student).getBatAvg());
                 System.out.println("\tPosition:"+tmpPosition);
@@ -625,7 +625,7 @@ public class StudentDriver
             else if (student instanceof Basketball)
             {
                 System.out.println("Basketball: ");
-                
+
                 byte level=((Basketball)student).getLevel();
                 String tmpLevel="";
                 switch(level)
@@ -642,7 +642,7 @@ public class StudentDriver
                     default:
                         tmpLevel="Error.";
                 }
-                
+
                 System.out.println("\tLevel: "+tmpLevel);
                 System.out.println("\tPPG: "+((Basketball)student).getPpg());
                 System.out.println("\tRPG: "+((Basketball)student).getRpg());
@@ -651,11 +651,11 @@ public class StudentDriver
         else if (student instanceof Artist)
         {
             System.out.println("Artist: "+((Artist)student).getYrsExp()+" years of experience.");
-            
+
             if (student instanceof Musician)
             {
                 System.out.println("Musician: ");
-                
+
                 byte group=((Musician)student).getGroup();
                 String tmpGroup="";
                 if ((group & Musician.ORCHESTRA) == Musician.ORCHESTRA)
@@ -664,21 +664,21 @@ public class StudentDriver
                     tmpGroup=tmpGroup.concat(" Band");
                 if ((group & Musician.CHOIR) == Musician.CHOIR)
                     tmpGroup=tmpGroup.concat(" Choir");
-                    
+
                 System.out.println("\tGroup: "+tmpGroup);
                 System.out.println("\tInstrument: "+((Musician)student).getInstrument());
             }
             else if (student instanceof Actor)
             {
                 System.out.println("Actor: ");
-                
+
                 boolean thespian=((Actor)student).getThespian();
                 String tmpThespian="";
                 if (thespian)
                     tmpThespian="Thespian.";
                 else
                     tmpThespian="Not a Thespian.";
-                
+
                 System.out.println("\t"+tmpThespian);
                 System.out.println("\tNumber of Plays: "+((Actor)student).getNumPlays());
             }
@@ -745,16 +745,16 @@ public class StudentDriver
         newGpa=DriverUtil.newGpaScan(scan);
         if (newGpa!=-1)
             student.setGpa(newGpa);
-        
+
         String firstName=student.getFirstName();
-        
+
         if ((student instanceof Athlete) || (student instanceof Artist))
             System.out.println();
-        
+
         if (student instanceof Athlete)
         {
             System.out.println("Athlete: ");
-            
+
             boolean clearance=false;
             boolean clearanceRun=true;
             while(clearanceRun)
@@ -790,10 +790,10 @@ public class StudentDriver
                     System.out.println("Invalid entry.");
             }
             ((Athlete)student).setClearance(clearance);
-            
+
             if (newGpa!=-1)
                 ((Athlete)student).setEligible(Athlete.checkEligibility(newGpa)); //Change eligibility based on the new GPA if a new GPA was entered.
-            
+
             byte level=00000000;
             boolean levelRun=true;
             while(levelRun)
@@ -833,16 +833,16 @@ public class StudentDriver
                 else
                     System.out.println("Invalid entry.");
             }
-            
+
             if (student instanceof Baseball)
-            {                
+            {
                 System.out.println("Baseball: ");
                 ((Baseball)student).setLevel(level);
-                
+
                 double newBatAvg=DriverUtil.newDoubleScan(scan,"New Batting Average: ");
                 if (newBatAvg!=-1)
                     ((Baseball)student).setBatAvg(newBatAvg);
-                
+
                 short position=00000000;
                 boolean positionRun=true;
                 while (positionRun)
@@ -902,13 +902,13 @@ public class StudentDriver
                     }
                     else
                         System.out.println("Invalid entry.");
-                                            
+
                     System.out.println("Do they play another position?");
                     System.out.println();
                     System.out.println("\tEnter Y for (Y)es");
                     System.out.println("\tEnter N for (N)o");
                     System.out.println();
-                                            
+
                     System.out.print("\tPlease enter your choice: ");
                     String morePositionsInputActionString=scan.next().toLowerCase();
                     char morePositionsInputAction=morePositionsInputActionString.charAt(0);
@@ -936,11 +936,11 @@ public class StudentDriver
             {
                 System.out.println("Basketball: ");
                 ((Basketball)student).setLevel(level);
-                
+
                 double newPpg=DriverUtil.newDoubleScan(scan,"New PPG: ");
                 if (newPpg!=-1)
                     ((Basketball)student).setPpg(newPpg);
-                
+
                 double newRpg=DriverUtil.newDoubleScan(scan,"New RPG: ");
                 if (newRpg!=-1)
                     ((Basketball)student).setRpg(newRpg);
@@ -949,11 +949,11 @@ public class StudentDriver
         else if (student instanceof Artist)
         {
             System.out.println("Artist: ");
-            
+
             int newYrsExp=DriverUtil.newIntScan(scan,"New Years of Experience: ");
             if (newYrsExp!=-1)
                 ((Artist)student).setYrsExp(newYrsExp);
-            
+
             if (student instanceof Musician)
             {
                 System.out.println("Musician: ");
@@ -991,13 +991,13 @@ public class StudentDriver
                     }
                     else
                         System.out.println("Invalid entry.");
-                                            
+
                     System.out.println("Do they play in another group?");
                     System.out.println();
                     System.out.println("\tEnter Y for (Y)es");
                     System.out.println("\tEnter N for (N)o");
                     System.out.println();
-                    
+
                     System.out.print("\tPlease enter your choice: ");
                     String moreGroupsInputActionString=scan.next().toLowerCase();
                     char moreGroupsInputAction=moreGroupsInputActionString.charAt(0);
@@ -1020,13 +1020,13 @@ public class StudentDriver
                         System.out.println("Invalid entry.");
                 }
                 ((Musician)student).setGroup(group);
-                
+
                 System.out.print("New Instrument: ");
                 String newInstrument=scan.next();
                 if (!newInstrument.equals(""))
                     ((Musician)student).setInstrument(newInstrument);
             }
-            
+
             if (student instanceof Actor)
             {
                 System.out.println("Actor: ");
@@ -1063,7 +1063,7 @@ public class StudentDriver
                         System.out.println("Invalid entry.");
                 }
                 ((Actor)student).setThespian(thespian);
-                
+
                 int newNumPlays=DriverUtil.newIntScan(scan,"New Number of Plays: ");
                 if (newNumPlays!=-1)
                     ((Actor)student).setNumPlays(newNumPlays);

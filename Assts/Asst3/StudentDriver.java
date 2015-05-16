@@ -2,9 +2,9 @@
  * @author Sam Dale
  * @version 12/2/13
  * AP Computer Science
- * 
+ *
  * Asst1: Create some students (instantiate objects).
- * Create two classes: StudentDriver, which is the driver and contains the main(). 
+ * Create two classes: StudentDriver, which is the driver and contains the main().
  * The other is Student, which contains the constructors.
  * Asst2: Add functionality to modify a student (use getters and setters).
  * Asst3: Add Print capability (display to screen, use a toString).
@@ -12,7 +12,7 @@
 import java.util.*;
 public class StudentDriver
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("\tStudent Database");
         System.out.println();
@@ -20,7 +20,7 @@ public class StudentDriver
         int numStudents=DriverUtil.inputNumber(scan); //Check to make sure the input is a number.
         System.out.println();
         Student [] students=new Student[numStudents];
-        
+
         System.out.println("\tStudent Info Menu");
         System.out.println();
         boolean run=true;
@@ -31,7 +31,7 @@ public class StudentDriver
             System.out.println("\tEnter P to (P)rint Student info");
             System.out.println("\tEnter Q to quit");
             System.out.println();
-            
+
             System.out.print("\tPlease enter your choice: ");
             String inputActionString=scan.next().toLowerCase();
             char inputAction=inputActionString.charAt(0);
@@ -75,7 +75,7 @@ public class StudentDriver
             }
         }
     } //End main.
-    
+
     public static void printList(Student [] students)
     {
         System.out.println("ID\tName");
@@ -83,7 +83,7 @@ public class StudentDriver
             System.out.println(students[i].getId()+"\t"+students[i].getLastName()+", "+students[i].getFirstName());
         System.out.println();
     }
-    
+
     /***********************************************************************************************************
      * loadStudent()
      * ********************************************************************************************************/
@@ -96,7 +96,7 @@ public class StudentDriver
         int zip;
         String phone;
         double gpa;
-        
+
         System.out.print("Student's last name: ");
         lastName=scan.next();
         System.out.print("Student's first name: ");
@@ -109,11 +109,11 @@ public class StudentDriver
         System.out.print("Student's phone number: ");
         phone=scan.next();
         gpa=DriverUtil.gpaScan(scan);
-        
+
         Student thisStudent=new Student(lastName, firstName, street, city, zip, phone, gpa);
         return thisStudent;
     } //End loadStudent.
-    
+
     /***********************************************************************************************************
      * modifyStudent()
      * ********************************************************************************************************/
@@ -128,7 +128,7 @@ public class StudentDriver
         System.out.println("Phone: "+student.getPhone());
         System.out.println("GPA: "+student.getGpa());
         System.out.println();
-        
+
         String newLastName=null;
         String newFirstName=null;
         String newStreet=null;
@@ -136,44 +136,44 @@ public class StudentDriver
         int newZip=0;
         String newPhone=null;
         double newGpa=-1;
-        
+
         System.out.println("New Info (press ENTER to keep same information):");
         System.out.print("New Last Name: ");
         newLastName=scan.next();
         if (!newLastName.equals(""))
             student.setLastName(newLastName);
-            
+
         System.out.print("New First Name: ");
         newFirstName=scan.next();
         if (!newFirstName.equals(""))
             student.setFirstName(newFirstName);
-            
+
         System.out.print("New Street: ");
         newStreet=scan.next();
         if (!newStreet.equals(""))
             student.setStreet(newStreet);
-            
+
         System.out.print("New City: ");
         newCity=scan.next();
         if (!newCity.equals(""))
             student.setCity(newCity);
-            
+
         newZip=DriverUtil.newZipScan(scan);
         if (newZip!=-1)
             student.setZip(newZip);
-            
+
         System.out.print("New Phone: ");
         newPhone=scan.next();
         if (!newPhone.equals(""))
             student.setPhone(newPhone);
-            
+
         newGpa=DriverUtil.newGpaScan(scan);
         if (newGpa!=-1)
             student.setGpa(newGpa);
-        
+
         System.out.println();
     } //End modifyStudent.
-    
+
     /***********************************************************************************************************
      * printStudent()
      * ********************************************************************************************************/
@@ -184,7 +184,7 @@ public class StudentDriver
         else
             System.out.println("There are "+numStudents+" students in the database.");
         System.out.println();
-        
+
         System.out.println(student.toString());
         System.out.println();
     } //End printStudent.
