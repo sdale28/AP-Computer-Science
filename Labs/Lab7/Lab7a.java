@@ -1,8 +1,8 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 10/21/13
  * AP Computer Science
- * 
+ *
  * Lab7a: Test Scores
  * Compute average test scores.
  * Prompt the user for the number of scores to be entered. Declare an array of that size.
@@ -12,7 +12,7 @@
 import java.util.*;
 public class Lab7a
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Test Scores");
         System.out.println();
@@ -24,7 +24,7 @@ public class Lab7a
             tests[i]=enterScore(scan,i);
         }
         System.out.println();
-        
+
         System.out.println("Your scores:");
         for (int j=0;j<tests.length;j++) //For loop prints out all of the scores at the bottom.
         {
@@ -34,7 +34,7 @@ public class Lab7a
         double average=calculateAverage(tests);
         System.out.println("Average = "+average);
     }
-    
+
     public static int numberOfTests(Scanner scan)
     {
         boolean run=true;
@@ -57,7 +57,7 @@ public class Lab7a
         }
         return numberOfTests;
     }
-    
+
     public static double enterScore(Scanner scan,int i)
     {
         boolean run=true;
@@ -80,7 +80,7 @@ public class Lab7a
         }
         return score;
     }
-    
+
     public static double calculateAverage(double[] tests)
     {
         double sum=0;

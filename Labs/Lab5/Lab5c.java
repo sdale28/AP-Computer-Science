@@ -1,8 +1,8 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 10/15/13
  * AP Computer Science
- * 
+ *
  * Lab5c: Mortgage calculator.
  * Prompt the user for the principal amount (the amount of money that they want to borrow). Prompt for the interest rate.
  * Calculate the monthly payment.
@@ -10,7 +10,7 @@
 import java.util.*;
 public class Lab5c
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Mortgage calculator.");
         System.out.println();
@@ -44,7 +44,7 @@ public class Lab5c
             }
         }
     }
-    
+
     public static double input(Scanner scan)
     {
         boolean run=true;
@@ -66,12 +66,12 @@ public class Lab5c
         }
         return input;
     }
-    
+
     public static double monthlypayment(double P,double r,double n) //P=principal amount, r=annual interest rate, and n=number of months (as given in equation).
     {
         return P*((r/12)*Math.pow(1+r/12,n))/(Math.pow(1+r/12,n)-1); //Given equation for calculating the monthly payment.
     }
-    
+
     public static double totalmonthly(double monthlypayment,double principal)
     {
         double housevalue=principal/.8;

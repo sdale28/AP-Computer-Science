@@ -7,7 +7,7 @@
  */
 public class Lab1
 {
-   public static void main(){
+   public static void main(String args[]){
        //Personal information printed using println.
        System.out.println("My name is Sam Dale.");
        System.out.println("My birthday is March 6th.");

@@ -1,14 +1,14 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 9/30/13
  * AP Computer Science
- * 
+ *
  * Lab 3e: Create versions of the Stars program to print a diamond pattern.
  */
 import java.util.*;
 public class Lab3e
 {
-    public static void main(){
+    public static void main(String args[]){
         System.out.println("Create a Diamond of Stars. Enter 0 to end program.");
         boolean run=true;
         while (run==true){ //End program at a sentinel set at 0.

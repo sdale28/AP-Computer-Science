@@ -1,13 +1,13 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 11/24/13
  * AP Computer Science
- * 
+ *
  * Lab 3d: Create versions of the Stars program to print a triangle pattern.
  */
 public class Lab3d
 {
-    public static void main(){
+    public static void main(String args[]){
         for (int rows=9;rows>=0;rows--){ //For loop gives number of lines.
             for (int spaces=rows;spaces>=1;spaces--){ //For loop prints spaces.
                 System.out.print(" ");

@@ -1,13 +1,13 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 10/3/13
  * AP Computer Science
- * 
+ *
  * A quiz on data types and operators.
  */
 public class Quiz100313
 {
-    public static void main()
+    public static void main(String args[])
     {
         int length=25;
         int width=42;

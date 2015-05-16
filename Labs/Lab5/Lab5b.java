@@ -1,8 +1,8 @@
-/** 
+/**
  * @author Sam Dale
  * @version 10/11/13
  * AP Computer Science
- * 
+ *
  * Lab 5b: Carpet Cost Calculator
  * Prompt the user to enter the room dimentsions in feet.
  * Prompt the user to enter the cost of the carpet, per square yard.
@@ -11,7 +11,7 @@
 import java.util.*;
 public class Lab5b
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Calculate the cost of carpet.");
         System.out.println("1. Enter D to enter the (D)imensions of the room");
@@ -29,7 +29,7 @@ public class Lab5b
             System.out.print("What do you want to do: ");
             String input1string=scan.next().toLowerCase();
             char input1=input1string.charAt(0);
-            
+
             switch(input1)
             {
                 case 'd':
@@ -58,9 +58,9 @@ public class Lab5b
                     System.out.println("Program ended");
                     break;
                 default:
-                    System.out.println("Error in entry."); //If a character that was not expected was entered, the while loop will run again and reprompt the user. 
+                    System.out.println("Error in entry."); //If a character that was not expected was entered, the while loop will run again and reprompt the user.
             }
-            
+
             if (runCaseD==false && runCaseC==false) //Once both the dimensions and cost have been entered, calculate the total cost.
             {
                 double totalcost=totalcost(area,cost);
@@ -71,7 +71,7 @@ public class Lab5b
             }
         }
     }
-    
+
     public static double length(Scanner scan)
     {
         boolean run=true;
@@ -94,7 +94,7 @@ public class Lab5b
         }
         return length;
     }
-    
+
     public static double width(Scanner scan)
     {
         boolean run=true;
@@ -117,12 +117,12 @@ public class Lab5b
         }
         return width;
     }
-    
+
     public static double area(double width,double length)
     {
         return width*length;
     }
-    
+
     public static double entercost(Scanner scan)
     {
         boolean run=true;
@@ -145,7 +145,7 @@ public class Lab5b
         }
         return entercost;
     }
-    
+
     public static double totalcost(double area,double cost)
     {
         return area*(cost/9); //Cost divided by nine converts square yards to square feet.

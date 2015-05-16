@@ -6,7 +6,7 @@
  */
 public class Lab2
 {
-   public static void main(){
+   public static void main(String args[]){
    System.out.println("There was an old lady who swallowed a fly.");
    printRefrain();
    System.out.println("There was an old lady who swallowed a spider.");
@@ -34,21 +34,21 @@ public class Lab2
    System.out.println("There was an old lady who swallowed a horse.");
    System.out.println("She died of course.");
    }
-   
+
    public static void printRefrain(){
    System.out.println("I don't know why she swallowed that fly,");
    System.out.println("Perhaps she'll die.");
    System.out.println();
    }
-   
+
    public static void printSpiderFly(){
    System.out.println("She swallowed the spider to catch the fly,");
    }
-    
+
    public static void printBirdSpider(){
    System.out.println("She swallowed the bird to catch the spider,");
    }
-   
+
    public static void printCatBird(){
    System.out.println("She swallowed the cat to catch the bird,");
    }

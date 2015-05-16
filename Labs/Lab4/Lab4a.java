@@ -2,14 +2,14 @@
  * @author Sam Dale
  * @version 10/1/2013
  * AP Computer Science
- * 
+ *
  * Lab 4a: Design and implement a program that prompts the user to enter an integer. Print whether the
  * number entered is even or odd, positive or negative.
  */
 import java.util.*;
 public class Lab4a
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Enter an integer to find out information about it. Enter 0 to end.");
         boolean run=true;

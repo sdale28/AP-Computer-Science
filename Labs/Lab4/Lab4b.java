@@ -1,15 +1,15 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 10/1/2013
  * AP Computer Science
- * 
+ *
  * Lab 4b: Design and implement a program that prompts the user to enter an integer. Determine and print
  * the number of odd, even, and zero digits.
  */
 import java.util.*;
 public class Lab4b
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Enter an integer to find out about the digits. Enter 0 to exit.");
         boolean run=true;

@@ -2,14 +2,14 @@
  * @author Sam Dale
  * @version 11/1/13
  * AP Computer Science
- * 
+ *
  * Lab8b: Put the following list of strings in lexicographic order as if determined by the compareTo
  * method of the String class. Consult a Unicode chart (google it) for the proper order.
  */
 import java.util.*;
 public class Lab8b
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Lexicographic Order");
         String temporary="";
@@ -26,7 +26,7 @@ public class Lab8b
                 }
              }
         }
-        
+
         for (int k=0;k<=13;k++)
             System.out.println(list[k]);
     }

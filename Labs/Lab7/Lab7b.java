@@ -1,8 +1,8 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 10/22/13
  * AP Computer Science
- * 
+ *
  * Lab7b: holiday Shopping
  * 1. Welcome the user to your shopping budget program.
  * 2. Ask the user how many people he is shopping for this Holiday season.
@@ -10,7 +10,7 @@
  *      a. One to store the names of all the people they are shopping for.
  *      b. One to store the amount of money to be spent on each person.
  * 4. Prompt the user for the name of each person they will be shopping for.
- * 5. Prompt the user for the amount of money they will be spending on each person. When asking 
+ * 5. Prompt the user for the amount of money they will be spending on each person. When asking
  *    for the money, include the name of the person they are shopping for in the prompt.
  * 6. Print a table of people shopped for, budget amount for that person, and the total amount of
  *    money that will be spent this holiday season by the user.
@@ -18,7 +18,7 @@
 import java.util.*;
 public class Lab7b
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Holiday Shopping");
         System.out.println();
@@ -38,7 +38,7 @@ public class Lab7b
             System.out.println();
             totalcost+=budgetPerPerson[i];
         }
-        
+
         System.out.println("You're shopping table:");
         System.out.println("Name \t\t\t Budget for Person");
         System.out.println ();
@@ -49,7 +49,7 @@ public class Lab7b
         System.out.println("_______________________________");
         System.out.println("Total\t\t\t $"+totalcost);
     }
-    
+
     public static int numberOfPeople(Scanner scan)
     {
         boolean run=true;
@@ -72,7 +72,7 @@ public class Lab7b
         }
         return numberOfPeople;
     }
-    
+
     public static double input(Scanner scan,String[] names,int i)
     {
         boolean run=true;

@@ -1,14 +1,14 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 2/24/2014
  * AP Computer Science
- * 
+ *
  * RecursionLab2: Practice using recursion by calculating taking 2 to a desired integer (greater than or equal to 0).
  */
 import java.util.*;
 public class Driver
 {
-    public static void main()
+    public static void main(String args[])
     {
         Scanner scan=new Scanner(System.in);
         boolean run=true;

@@ -2,7 +2,7 @@
  * @author Sam Dale
  * @version 11/1/13
  * AP Computer Science
- * 
+ *
  * Lab8a: StringTokenizer
  * Write a program that receives user input for a monetary value, and extracts the dollars and cents
  * using the StringTokenizer class.
@@ -10,7 +10,7 @@
 import java.util.*;
 public class Lab8a
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Monetary Values");
         System.out.println("Enter a monetary value (in the format of \"$x.xx\") to find out the dollars and cents.");

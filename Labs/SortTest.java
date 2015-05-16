@@ -1,9 +1,9 @@
 /**
- * @author Sam Dale 
+ * @author Sam Dale
  * @version 3/4/2014
  * AP Computer Science
- * 
- * Sort Labs: 
+ *
+ * Sort Labs:
  * Create an array of 100 random integers (using Math.random()*100).
  * Create methods selectionSort, insertionSort, and mergeSort in the in a class called Sort.
  * Print the original each time before printing the newly sorted array.
@@ -11,7 +11,7 @@
  */
 public class SortTest
 {
-    public static void main()
+    public static void main(String args[])
     {
         int [] array1=new int [100];
         int [] array2=new int [100]; //Create three original arrays, because otherwise selection sort would sort the array and insertion and merge would sort a sorted array.
@@ -26,13 +26,13 @@ public class SortTest
                 System.out.println();
         }
         System.out.println();
-        
-        /*************************************************************************************************************************************************** 
+
+        /***************************************************************************************************************************************************
          * Selection Sort
          **************************************************************************************************************************************************/
         int [] selArray=array1;
         Sort.mergeSort(selArray);
-        
+
         for (int i=0;i<selArray.length;i++) //Print out the new array.
         {
             System.out.print(selArray[i]+"\t");
@@ -40,8 +40,8 @@ public class SortTest
                 System.out.println();
         }
         System.out.println();
-        
-        /*************************************************************************************************************************************************** 
+
+        /***************************************************************************************************************************************************
          * Insertion Sort
          **************************************************************************************************************************************************/
         for (int i=0;i<array2.length;i++)
@@ -51,10 +51,10 @@ public class SortTest
                 System.out.println();
         }
         System.out.println();
-        
+
         int [] insArray=array2;
         Sort.insertionSort(insArray);
-        
+
         for (int i=0;i<insArray.length;i++) //Print out the new array.
         {
             System.out.print(insArray[i]+"\t");
@@ -62,8 +62,8 @@ public class SortTest
                 System.out.println();
         }
         System.out.println();
-        
-        /*************************************************************************************************************************************************** 
+
+        /***************************************************************************************************************************************************
          * Merge Sort
          **************************************************************************************************************************************************/
         for (int i=0;i<array3.length;i++)
@@ -73,10 +73,10 @@ public class SortTest
                 System.out.println();
         }
         System.out.println();
-        
+
         int [] merArray=array3;
         Sort.mergeSort(merArray);
-        
+
         for (int i=0;i<merArray.length;i++) //Print out the new array.
         {
             System.out.print(merArray[i]+"\t");

@@ -2,7 +2,7 @@
  * @author Sam Dale
  * @version 10/10/13
  * AP Computer Science
- * 
+ *
  * Lab5a: Create a calculator.
  * Write a program to prompt the user for an integer, and a floating point (declare this as double). Then prompt the user to
  * compute the product, quotient, sum, or differenceof the two numbers, and printthe result in the main program.
@@ -10,7 +10,7 @@
 import java.util.*;
 public class Lab5a
 {
-    public static void main()
+    public static void main(String args[])
     {
         System.out.println("Choose what to do: ");
         System.out.println("1. Enter P to compute the Product");
@@ -27,7 +27,7 @@ public class Lab5a
             System.out.print("What do you want to do: ");
             String input1string=scan.next().toLowerCase(); //Allows lowercase character to be entered.
             char input1=input1string.charAt(0); //Takes in the first input (which should be a char from the menu given to the user).
-            
+
             int input2; //Integer entered
             double input3; //Floating point entered.
             switch(input1)
@@ -71,7 +71,7 @@ public class Lab5a
             }
         }
     }
-    
+
     public static int input2(Scanner scan)
     {
         boolean run=true;
@@ -93,7 +93,7 @@ public class Lab5a
         }
         return input2;
     }
-    
+
     public static double input3(Scanner scan)
     {
         boolean run=true;
@@ -115,27 +115,27 @@ public class Lab5a
         }
         return input3;
     }
-    
+
     public static double product(int input2,double input3)
     {
         return input2*input3;
     }
-    
+
     public static double quotient(int input2,double input3)
     {
         return input2/input3;
     }
-    
+
     public static double sum(int input2,double input3)
     {
         return input2+input3;
     }
-    
+
     public static double difference(int input2,double input3)
     {
         return input2-input3;
     }
-    
+
     public static String compare(int input2,double input3) //Return a string that has the comparison statement already written out.
     {
         if (input2>input3)
