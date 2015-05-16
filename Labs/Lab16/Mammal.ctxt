@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=gender\ hairType
+comment0.target=Mammal(boolean,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ speak()
+comment1.text=\n\ speak()\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\n\ toString()\n
+numComments=3

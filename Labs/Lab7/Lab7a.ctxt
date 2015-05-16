@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=scan
+comment1.target=int\ numberOfTests(java.util.Scanner)
+comment2.params=scan\ i
+comment2.target=double\ enterScore(java.util.Scanner,\ int)
+comment3.params=tests
+comment3.target=double\ calculateAverage(double[])
+numComments=4

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=students
+comment1.target=void\ printList(Student[])
+comment2.params=scan
+comment2.target=Student\ loadStudent(java.util.Scanner)
+comment2.text=\r\n\ loadStudent()\r\n*******************************************************************************************************
+comment3.params=scan\ student
+comment3.target=void\ modifyStudent(java.util.Scanner,\ Student)
+comment3.text=\r\n\ modifyStudent()\r\n*******************************************************************************************************
+comment4.params=numStudents\ student
+comment4.target=void\ printStudent(int,\ Student)
+comment4.text=\r\n\ printStudent()\r\n*******************************************************************************************************
+comment5.params=numStudents
+comment5.target=Student[]\ readFile(int)
+comment5.text=\r\n\ readFile()\r\n*******************************************************************************************************
+comment6.params=students
+comment6.target=void\ writeFile(Student[])
+comment6.text=\r\n\ writeFile()\r\n*******************************************************************************************************
+numComments=7

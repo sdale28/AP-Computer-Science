@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=gender\ hairType\ name\ intBones
+comment0.target=Dog(boolean,\ java.lang.String,\ java.lang.String,\ int)
+comment1.params=
+comment1.target=java.lang.String\ speak()
+comment1.text=\r\n\ speak()\r\n
+comment2.params=
+comment2.target=int\ digBones()
+comment2.text=\r\n\ digBones()\r\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\r\n\ getName()\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ toString()\r\n
+numComments=5

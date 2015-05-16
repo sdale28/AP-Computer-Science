@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=name\ dateCreated\ protectionMask
+comment0.target=File(java.lang.String,\ java.util.Date,\ byte)
+comment1.params=
+comment1.target=byte\ getProtectionMask()
+comment1.text=\r\n\ getProtectionMask()\r\n
+comment2.params=protectionMask\ dateModified
+comment2.target=void\ setProtectionMask(byte,\ java.util.Date)
+comment2.text=\r\n\ setProtectionMask()\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ toString()\r\n
+numComments=4

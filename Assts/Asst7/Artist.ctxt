@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=lastName\ firstName\ home1\ home2\ phone\ gpa\ yrsExp
+comment0.target=Artist(java.lang.String,\ java.lang.String,\ Address,\ Address,\ java.lang.String,\ double,\ int)
+comment1.params=
+comment1.target=int\ getYrsExp()
+comment1.text=\r\n\ The\ getter\ (accessor).\r\n
+comment2.params=yrsExp
+comment2.target=void\ setYrsExp(int)
+comment2.text=\r\n\ The\ setter\ (mutator).\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ toString()\r\n
+numComments=4

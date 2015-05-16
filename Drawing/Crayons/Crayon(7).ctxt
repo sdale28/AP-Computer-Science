@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=color\ x\ y\ height
+comment0.target=Crayon(java.awt.Color,\ int,\ int,\ int)
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+comment2.params=
+comment2.target=java.awt.Color\ getColor()
+comment3.params=color
+comment3.target=void\ setColor(java.awt.Color)
+numComments=4

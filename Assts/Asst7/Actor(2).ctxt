@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=lastName\ firstName\ home1\ home2\ phone\ gpa\ yrsExp\ thespian\ numPlays
+comment0.target=Actor(java.lang.String,\ java.lang.String,\ Address,\ Address,\ java.lang.String,\ double,\ int,\ boolean,\ int)
+comment1.params=
+comment1.target=boolean\ getThespian()
+comment1.text=\r\n\ Getters\r\n
+comment2.params=
+comment2.target=int\ getNumPlays()
+comment3.params=thespian
+comment3.target=void\ setThespian(boolean)
+comment3.text=\r\n\ Setters\r\n
+comment4.params=numPlays
+comment4.target=void\ setNumPlays(int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ toString()\r\n
+numComments=6

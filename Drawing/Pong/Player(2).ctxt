@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=x\ y
+comment0.target=Player(int,\ int)
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+comment2.params=increment
+comment2.target=void\ incrementY(int)
+comment3.params=
+comment3.target=int\ getScore()
+numComments=4

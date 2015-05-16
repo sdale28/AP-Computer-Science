@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=x\ y\ length
+comment0.target=Wall(int,\ int,\ int)
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+numComments=2
