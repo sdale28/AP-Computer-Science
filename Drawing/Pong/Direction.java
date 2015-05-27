@@ -8,19 +8,19 @@ public class Direction
     public static final int DOWNLEFT=225;
     public static final int DOWN=270;
     public static final int DOWNRIGHT=315;
-    
+
     private int direction;
-    
+
     public Direction(int direction)
     {
         this.direction=direction;
     }
-    
+
     public int getDirection()
     {
         return direction;
     }
-    
+
     public void setDirection(int direction)
     {
         if (direction>=360)
